@@ -15,7 +15,7 @@ def generate_key(filepath):
 
 
 def read_yaml_from_file(filepath):
-    return yaml.load(
+    return yaml.safe_load(
         open(filepath, 'rb'))
 
 
@@ -59,7 +59,7 @@ class CryptoYAML(object):
         """ Reads and decrypts data from the filesystem """
         if path.exists(self.filepath):
             with open(self.filepath, 'rb') as infile:
-                self.data = yaml.load(
+                self.data = yaml.safe_load(
                     self.fernet.decrypt(infile.read()))
         else:
             self.data = dict()
