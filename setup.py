@@ -3,7 +3,7 @@ import os
 from setuptools import setup
 
 
-name = 'cryptoyaml'
+name = 'cryptoyaml3'
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -26,8 +26,8 @@ LONG = (
 
 setup(
     name=name,
-    version_format='{tag}.{commitcount}+{gitsha}',
-    url='https://github.com/getsenic/senic.cryptoyaml',
+    version_format='{tag}',
+    url='https://github.com/dflupu/cryptoyaml3.git',
     author='Senic GmbH',
     author_email='tom@senic.com',
     description='A python library to manage encrypted YAML files.',
